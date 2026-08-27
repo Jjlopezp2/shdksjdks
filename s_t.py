@@ -82,7 +82,7 @@ if result:
         ("Inglés", "Islandés", "Norwegian", "Cherokee", "Mandarín", "Japonés"),
     )
     if in_lang == "Inglés":
-        input_language = "en-GB"
+        input_language = "en"
     elif in_lang == "Islandés":
         input_language = "is"
     elif in_lang == "Norwegian":

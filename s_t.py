@@ -19,7 +19,7 @@ st.title("TRADUCTOR.")
 st.subheader("Escucho lo que quieres traducir.")
 
 
-image = Image.open('OIG7.jpg')
+image = Image.open('robot-translator-language-ai-vector-29370860.avif')
 
 st.image(image,width=300)
 with st.sidebar:
@@ -37,7 +37,7 @@ stt_button.js_on_event("button_click", CustomJS(code="""
     var recognition = new webkitSpeechRecognition();
     recognition.continuous = false;  // Cambia a false
     recognition.interimResults = true;
-    recognition.lang = 'es-ES';  // Puedes ajustar el idioma
+    recognition.lang = 'en-GB';  // Puedes ajustar el idioma
  
     recognition.onresult = function (e) {
         var value = "";
@@ -79,16 +79,16 @@ if result:
     text = str(result.get("GET_TEXT"))
     in_lang = st.selectbox(
         "Selecciona el lenguaje de Entrada",
-        ("Inglés", "Español", "Bengali", "Coreano", "Mandarín", "Japonés"),
+        ("Inglés", "Islandés", "Norwegian", "Cherokee", "Mandarín", "Japonés"),
     )
     if in_lang == "Inglés":
-        input_language = "en"
-    elif in_lang == "Español":
-        input_language = "es"
-    elif in_lang == "Bengali":
-        input_language = "bn"
-    elif in_lang == "Coreano":
-        input_language = "ko"
+        input_language = "en-GB"
+    elif in_lang == "Islandés":
+        input_language = "is"
+    elif in_lang == "Norwegian":
+        input_language = "no"
+    elif in_lang == "Cherokee":
+        input_language = "chr"
     elif in_lang == "Mandarín":
         input_language = "zh-cn"
     elif in_lang == "Japonés":
@@ -100,12 +100,12 @@ if result:
     )
     if out_lang == "Inglés":
         output_language = "en"
-    elif out_lang == "Español":
-        output_language = "es"
-    elif out_lang == "Bengali":
-        output_language = "bn"
-    elif out_lang == "Coreano":
-        output_language = "ko"
+    elif out_lang == "Islandés":
+        output_language = "is"
+    elif out_lang == "Norwegian":
+        output_language = "no"
+    elif out_lang == "Cherokee":
+        output_language = "chr"
     elif out_lang == "Mandarín":
         output_language = "zh-cn"
     elif out_lang == "Japonés":
